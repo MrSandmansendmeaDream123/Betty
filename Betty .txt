@@ -1,0 +1,333 @@
+Betty's Notes c:
+
+Hey Betty, it's 4:26 AM I wanted to write this for you to document how I am going about learning frontend dev stuff.
+I am starting of with some Javascript documentation for about a half hour. To learn the basics, then I'll move into some practice.
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Web APIs and DOMs ???
+
+You may like this https://developer.mozilla.org/en-US/docs/Web/JavaScript
+it's for complete begineers, but you probably know this stuff
+
+This is more something I would look into.https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+The webpage notes this is for those familiar with programming. And it talks on Promises which I will write on here.
+
+My goal is to make a vue.js app by Monday. I really appreciate you and want to help. Thank you for being awesome. I really appreciate you.
+
+So looks like I need to know the following:
+
+    A general understanding of the Internet and the World Wide Web (WWW). ???
+    Good working knowledge of HyperText Markup Language (HTML). okish
+    Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript. Hell yeah
+
+Ok I am ok with HTML and I have a lot of programming experience,but W3 is not a strong suite. Gonna read a bit and see what is important
+
+https://developer.mozilla.org/en-US/docs/Glossary/World_Wide_Web
+
+
+    The HTTP protocol governs data transfer between a server and a client.
+    To access a Web component, a client supplies a unique universal identifier, called a URL (uniform resource locator) or URI (uniform resource identifier) 
+	(formally called Universal Document Identifier (UDI)).
+    HTML (hypertext markup language) is the most common format for publishing web documents.
+W3C (World Wide Web Consortium) to standardize and develop the Web further
+https://developer.mozilla.org/en-US/docs/Learn - This leads to more of a general what you need to know which includes html, js, css etc.
+
+HEY ! FOUND THIS: https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer
+I mean it's from the source c: I hope this helps. This is from Mozilla, so I mean it should be all we need c:
+
+
+
+Note: Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups 
+using a graphics editor or web technologies.
+
+Web teams often include both a graphic designer and a user experience (UX) designer. Graphic designers put together the visuals of the website. 
+UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
+
+
+An aside on casing and spacing
+
+You'll notice that throughout this article, we ask you to name folders and files completely in lowercase with no spaces. This is because:
+
+    Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at test-site/MyImage.jpg and then in a different file you try to invoke the image as test-site/myimage.jpg, it may not work.
+    Browsers, web servers, and programming languages do not handle spaces consistently. For example, if you use spaces in your filename, some systems may treat the filename as two filenames. Some servers will replace the spaces in your filenames with "%20" (the character code for spaces in URLs), resulting in all your links being broken. It's better to separate words with hyphens, rather than underscores: my-file.html vs. my_file.html.
+
+The short answer is that you should use a hyphen for your file names. The Google search engine treats a hyphen as a word separator but does not regard an underscore that way. For these reasons, it is best to get into the habit of writing your folder and file names in lowercase with no spaces and with words separated by hyphens, at least until you know what you're doing. That way you'll bump into fewer problems down the road.
+
+The most common things we'll have on any website project we create are an index HTML file and folders to contain images, style files, and script files.
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions
+
+HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, 
+can make the font bigger or smaller, and so on. 
+
+Attributes contain extra information about the element that you don't want to appear in the actual content. They go in the opening tag. Example
+<p class="editor-note"> fngnngidnid </p>
+class is the attribute name and the value is editor-note. the class atribute allows for you to give a non unique identifier to a target
+
+Some attributes have no value
+
+Attributes that set a value always have:
+
+    A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
+    The attribute name followed by an equal sign.
+    The attribute value wrapped by opening and closing quotation marks.
+Nesting
+<p>My cat is <strong>very</strong> grumpy.</p>
+
+Void elements:
+
+<img src="images/firefox-icon.png" alt="My test image" />
+
+some elements have no content -> void elements such as <img> it has two attributes, but it does not close with /img> because it does not wrap content to affect it
+It's purpose is to embed an image in the HTML page in the place it appears
+
+
+HTML Anatomy:
+<!DOCTYPE html> — doctype. It is a required preamble, automatic error checking and other useful things
+
+<html></html> — the <html> element. This element wraps all the content on the entire page and is sometimes known as the root element.
+ It also includes the lang attribute, setting the primary language of the document.
+ 
+ <head></head> — the <head> element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the
+ content you are showing to your page's viewers
+ 
+ <meta charset="utf-8"> — This element sets the character set your document should use to UTF-8 which includes most characters from the vast 
+ majority of written languages There is no reason not to set this, and it can help avoid some problems later on.
+ 
+ <meta name="viewport" content="width=device-width"> — This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages 
+ wider than the viewport and then shrinking them down.
+ 
+ <title></title> — the <title> element. This sets the title of your page
+ 
+ <body></body> — the <body> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games,
+ playable audio tracks, or whatever else.
+ 
+ HTML contains 6 heading levels, <h1> - <h6>, although you'll commonly only use 3 to 4 at most
+ <!-- 4 heading levels: -->
+<h1>My main title</h1>
+<h2>My top level heading</h2>
+<h3>My subheading</h3>
+<h4>My sub-subheading</h4>
+
+ 
+ Note: Anything in HTML between <!-- and --> is an HTML comment. The browser ignores comments as it renders the code. 
+ As explained above, <p> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:
+ 
+ List:
+ 
+    Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a <ul> element.
+    Ordered lists are for lists where the order of the items does matter, such as a recipe. These are wrapped in an <ol> element.
+Each item inside the lists is put inside an <li> (list item) element.
+
+Links:
+Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — <a> — "a" being the short form for "anchor".
+Choose some text. We chose the text "Mozilla Manifesto".
+Wrap the text in an <a> element
+Give the <a> element an href attribute
+Fill in the value of this attribute with the web address that you want the link to
+Note: href might appear like a rather obscure choice for an attribute name at first. If you are having trouble remembering it, remember that it stands
+ for hypertext reference.
+ 
+ CSS
+ Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language
+ 
+ 
+Selector
+
+    This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <p> elements). To style a different element, change the selector.
+Declaration
+
+    This is a single rule like color: red;. It specifies which of the element's properties you want to style.
+Properties
+
+    These are ways in which you can style an HTML element. (In this example, color is a property of the <p> elements.) In CSS, you choose which properties you want to affect in the rule.
+Property value
+
+    To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)
+
+
+
+    Apart from the selector, each ruleset must be wrapped in curly braces. ({})
+    Within each declaration, you must use a colon (:) to separate the property from its value or values.
+    Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.
+
+To modify multiple property values in one ruleset, write them separated by semicolons
+
+p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}
+
+You can also select multiple elements and apply a single ruleset to all of them
+
+p,
+li,
+h1 {
+  color: red;
+}
+
+There are many different types of selectors. The examples above use element selectors, which select all elements of a given type. But we can make more specific selections as well. Here are some of the more common types of selectors:
+Selector name 	What does it select 	
+
+Example:
+
+Element selector
+ (sometimes called a tag or type selector) 	All HTML elements of the specified type. 	p
+selects <p>
+
+ID selector
+ 	The element on the page with the specified ID. On a given HTML page, each id value should be unique. 	#my-id
+selects <p id="my-id"> or <a id="my-id">
+
+Class selector
+ 	The element(s) on the page with the specified class. Multiple instances of the same class can appear on a page. 	.my-class
+selects <p class="my-class"> and <a class="my-class">
+
+Attribute selector 
+	The element(s) on the page with the specified attribute. 	img[src]
+selects <img src="myimage.png"> but not <img>
+
+Pseudo-class selector
+ 	The specified element(s), but only when in the specified state. (For example, when a cursor hovers over a link.) 	a:hover
+selects <a>, but only when the mouse pointer is hovering over the link. 
+
+CSS layout is mostly based on the box model. Each box taking up space on your page has properties like:
+
+    padding, the space around the content. In the example below, it is the space around the paragraph text.
+    border, the solid line that is just outside the padding.
+    margin, the space around the outside of the border.
+
+    width (of an element).
+    background-color, the color behind an element's content and padding.
+    color, the color of an element's content (usually text).
+    text-shadow sets a drop shadow on the text inside an element.
+    display sets the display mode of an element. (keep reading to learn more)
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #ff9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+\There are several declarations for the <body> element. Let's go through these line-by-line:
+
+    width: 600px; This forces the body to always be 600 pixels wide.
+    margin: 0 auto; 
+	*** When you set two values on a property like margin or padding, the first value affects the element's top and bottom side (setting it to 0 in this case); the second value affects the left and right side. (Here, auto is a special value that divides the available horizontal space evenly between left and right). You can also use one, two, three, or four values, as documented in Margin Syntax.
+    background-color: #FF9500; This sets the element's background color. This project uses a reddish orange for the body background color, as opposed to dark blue for the <html> element. (Feel free to experiment.)
+    padding: 0 20px 20px 20px; This sets four values for padding. The goal is to put some space around the content. In this example, there is no padding on the top of the body, and 20 pixels on the right, bottom and left. The values set top, right, bottom, left, in that order. As with margin, you can use one, two, three, or four values, as documented in Padding Syntax.
+    border: 5px solid black; This sets values for the width, style and color of the border. In this case, it's a five-pixel–wide, solid black border, on all sides of the body.
+
+
+Finally, text-shadow applies a shadow to the text content of the element. Its four values are:
+
+    The first pixel value sets the horizontal offset of the shadow from the text: how far it moves across.
+    The second pixel value sets the vertical offset of the shadow from the text: how far it moves down.
+    The third pixel value sets the blur radius of the shadow. A larger value produces a more fuzzy-looking shadow.
+    The fourth value sets the base color of the shadow.
+
+The <body> is a block element, meaning it takes up space on the page
+The margin applied to a block element will be respected by other elements on the page. In contrast, images are inline elements, 
+for the auto margin trick to work on this image, we must give it block-level behavior using display: block;.
+
+
+
+
+Note: The reason the instructions (above) place the <script> element near the bottom of the HTML file is that the browser reads code in the order it appears in the file.
+
+If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency. To learn more about alternative approaches, see Script loading strategies.
+
+
+ Everything in JavaScript is an object and can be stored in a variable. Keep this in mind as you learn. 
+ 
+ Vue
+ 
+ Project structure
+
+If everything went successfully, the CLI should have created a series of files and directories for your project. The most significant ones are as follows:
+
+    package.json: This file contains the list of dependencies for your project, as well as some metadata and eslint configuration.
+    yarn.lock: If you chose yarn as your package manager, this file will be generated with a list of all the dependencies and sub-dependencies that your project needs.
+    babel.config.js: This is the config file for Babel, which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
+    jsconfig.json: This is a config file for Visual Studio Code and gives context for VS Code on your project structure and assists auto-completion.
+    public: This directory contains static assets that are published, but not processed by Webpack during build (with one exception; index.html gets some processing).
+        favicon.ico: This is the favicon for your app. Currently, it's the Vue logo.
+        index.html: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
+
+        Note: this is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
+    src: This directory contains the core of your Vue app.
+        main.js: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the index.html file your app should be attached to. This file is often where you register global components or additional Vue libraries.
+        App.vue: this is the top-level component in your Vue app. See below for more explanation of Vue components.
+        components: this directory is where you keep your components. Currently, it just has one example component.
+        assets: this directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like Sass/SCSS or Stylus.
+
+
+So you may be curious what is a .vue file???
+Well it deals with the creation of what are called components. They all you to take large apps and break them into parts
+Unlike other frameworks,view uses SFC. Single File Components
+So we group templates,scrips, and css in one file ending with .vue
+
+App.vue
+Open your App.vue file — you'll see that it has three parts: <template>, <script>, and <style>, which contain the component's template, scripting, and styling information.
+ All Single File Components share this same basic structure.
+ 
+ <template> contains all the markup structure and display logic of your component. Your template can contain any valid HTML
+ <script> contains all of the non-display logic of your component. Most importantly, your <script> tag needs to have a default exported JS object.
+ 
+  Vue templates are currently only allowed a single root element — one element needs to wrap everything inside the template section 
+  (this will change when Vue 3 comes out). We'll use a <div> for that root element.
+  
+  NOTE!!!
+  If you use <script setup> you don't need to export components. because It is already exported by vue3. Well kind of
+  It has something to do with this thing called API Styles in vue3, Options or Composition
+  . Here is a bit on it: https://vuejs.org/guide/introduction.html#api-styles.
+ It even tells you what they would use based on circumstances! But your base code uses Composition, so lets stick to that ok c:
+ 
+ Reactvity seems extremly important: https://vuejs.org/guide/essentials/reactivity-fundamentals.html
+ Why Refs?
+​
+
+You might be wondering why we need refs with the .value instead of plain variables. To explain that, we will need to briefly discuss how Vue's reactivity system works.
+
+When you use a ref in a template, and change the ref's value later, Vue automatically detects the change and updates the DOM accordingly
+
+THIS IS JUST WHAT WE NEED! PERFECT!
+
+In standard JavaScript, there is no way to detect the access or mutation of plain variables. However, we can intercept the get
+ and set operations of an object's properties using getter and setter methods.
+ 
+ The .value property gives Vue the opportunity to detect when a ref has been accessed or mutated. Under the hood, Vue performs the tracking in its getter,
+ and performs triggering in its setter.
+For convenience, refs are automatically unwrapped when used inside templates (with a few caveats).
+ 
+ IMPORTANT!!!
+Props?
+- Component State handling. Similar to inputs in a function, The value of a prop fives components an initial state that affects their display
+Two methods:
+
+    The first way is to just list props out as an array of strings. Each entry in the array corresponds to the name of a prop.
+    The second way is to define props as an object, with each key corresponding to the prop name. Listing props as an object allows you to specify default values, mark props as required, perform basic object typing (specifically around JavaScript primitive types), and perform simple prop validation.
+The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+
+Computed Properties are helpful for seperating out complex logic that is repeated. returns a computed ref  similar to a noraml ref can access
+with .value but also unwraps itseld in template expressions. Since  it is reactive will update any bindings when the underlining info is updated
+
+computed properties are cached based on their reactive dependencies. Only revaluates if its dependicies change. Vs a method invocation which
+will update when a re-render happens
+
+https://vuejs.org/guide/essentials/computed.html#writable-computed
+The above is a version that uses setters too, this may be what we need c:
+
+Node.js uses the fetch command for REST api stuff, based on the instructions it seems we will be doing much the same
+
+https://vuejs.org/guide/components/registration.html
+You'll need some knowledge on registraion and Props
+
+
+IMPORTANT!!!
+https://vuejs.org/guide/essentials/component-basics.html
+Props are custom attributes you can register on a component.
